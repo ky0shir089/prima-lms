@@ -1,13 +1,13 @@
 "use server";
 
 import { requireAdmin } from "@/app/data/admin/require-admin";
-import arcjet, { detectBot, fixedWindow } from "@/lib/arcjet";
+import arcjet, { fixedWindow } from "@/lib/arcjet";
 import { prisma } from "@/lib/db";
 import { ApiResponse } from "@/lib/types";
 import { request } from "@arcjet/next";
 import { revalidatePath } from "next/cache";
 
-const aj = arcjet.withRule(detectBot({ mode: "LIVE", allow: [] })).withRule(
+const aj = arcjet.withRule(
   fixedWindow({
     mode: "LIVE",
     window: "1m",
@@ -15,9 +15,7 @@ const aj = arcjet.withRule(detectBot({ mode: "LIVE", allow: [] })).withRule(
   })
 );
 
-export async function deleteCourse(
-  courseId: string
-): Promise<ApiResponse> {
+export async function deleteCourse(courseId: string): Promise<ApiResponse> {
   const user = await requireAdmin();
 
   try {
@@ -54,7 +52,7 @@ export async function deleteCourse(
       message: "Course deleted successfully",
     };
   } catch (error) {
-    console.log(error)
+    console.log(error);
     return {
       status: "error",
       message: "Failed to delete course",
