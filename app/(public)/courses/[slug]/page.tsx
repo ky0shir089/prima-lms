@@ -279,7 +279,7 @@ const SlugPage = async ({ params }: { params: Params }) => {
 
               {isEnrolled ? (
                 <Link
-                  href={"/dashboard"}
+                  href={"/admin"}
                   className={buttonVariants({
                     className: "w-full",
                   })}

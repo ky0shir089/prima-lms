@@ -31,7 +31,7 @@ const PaymentSuccessfullPage = () => {
             </p>
 
             <Link
-              href={"/dashboard"}
+              href={"/admin"}
               className={buttonVariants({ className: "w-full mt-5" })}
             >
               <ArrowLeft className="size-4" />
