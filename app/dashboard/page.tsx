@@ -2,8 +2,6 @@ import { getEnrolledCourses } from "../data/user/get-enrolled-courses";
 import { getAllCourses } from "../data/course/get-all-courses";
 import EmptyState from "@/components/general/EmptyState";
 import PublicCourseCard from "../(public)/_components/PublicCourseCard";
-import CourseSlugPage from "./[slug]/page";
-import Link from "next/link";
 import CourseProgressCard from "./_components/CourseProgressCard";
 
 const DashboardPage = async () => {

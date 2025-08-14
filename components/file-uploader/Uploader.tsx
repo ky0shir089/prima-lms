@@ -123,7 +123,7 @@ const Uploader = ({ value, onChange, fileTypeAccepted }: iAppProps) => {
 
           xhr.send(file);
         });
-      } catch (error) {
+      } catch {
         toast.error("File upload failed. Please try again.");
 
         setFileState((prev) => ({
@@ -213,7 +213,7 @@ const Uploader = ({ value, onChange, fileTypeAccepted }: iAppProps) => {
       }));
 
       toast.success("File deleted successfully");
-    } catch (error) {
+    } catch {
       toast.error("Failed to delete file");
 
       setFileState((prev) => ({

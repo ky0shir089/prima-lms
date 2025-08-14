@@ -14,8 +14,6 @@ async function LessonContentLoader({ lessonId }: { lessonId: string }) {
 const LessonContentPage = async ({ params }: { params: Params }) => {
   const { lessonId } = await params;
 
-  const data = await getLessonContent(lessonId);
-
   return (
     <Suspense fallback={<LessonSkeleton />}>
       <LessonContentLoader lessonId={lessonId} />

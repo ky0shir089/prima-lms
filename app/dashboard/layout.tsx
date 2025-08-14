@@ -2,8 +2,14 @@ import { SiteHeader } from "@/components/site-header";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { ReactNode } from "react";
 import { AppSidebar } from "./_components/DashboardAppSidebar";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
 
-const DashboardLayout = ({ children }: { children: ReactNode }) => {
+const DashboardLayout = async ({ children }: { children: ReactNode }) => {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
   return (
     <SidebarProvider
       style={
@@ -13,7 +19,7 @@ const DashboardLayout = ({ children }: { children: ReactNode }) => {
         } as React.CSSProperties
       }
     >
-      <AppSidebar variant="inset" />
+      <AppSidebar variant="inset" user={session?.user} />
       <SidebarInset>
         <SiteHeader />
         <div className="flex flex-1 flex-col">

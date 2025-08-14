@@ -55,19 +55,19 @@ export async function updateLesson(
       where: {
         id: lessonId,
       },
-      data:{
+      data: {
         title: result.data.title,
         description: result.data.description,
         videoKey: result.data.videoKey,
-        thumbnailKey: result.data.thumbnailKey
-      }
+        thumbnailKey: result.data.thumbnailKey,
+      },
     });
 
     return {
       status: "success",
       message: "Lesson updated successfully",
     };
-  } catch (error) {
+  } catch {
     return {
       status: "error",
       message: "Something went wrong",

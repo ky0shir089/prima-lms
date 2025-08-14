@@ -23,8 +23,8 @@ export const auth = betterAuth({
   },
   plugins: [
     emailOTP({
-      async sendVerificationOTP({ email, otp, type }) {
-        const { data, error } = await resend.emails.send({
+      async sendVerificationOTP({ email, otp }) {
+        await resend.emails.send({
           from: "PrimaLMS <onboarding@resend.dev>",
           to: [email],
           subject: "PrimaLMS - Email Verification",

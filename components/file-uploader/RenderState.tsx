@@ -69,7 +69,7 @@ export function RenderUploadedState({
           src={previewUrl}
           alt="preview"
           fill
-          className="object-contain p-2"
+          className="object-contain p-"
         />
       )}
 

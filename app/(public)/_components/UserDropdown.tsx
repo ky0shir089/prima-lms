@@ -20,7 +20,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useSignOut } from "@/hooks/use-signout";
 
 interface iAppProps {
@@ -30,7 +29,6 @@ interface iAppProps {
 }
 
 export function UserDropdown({ name, email, image }: iAppProps) {
-  const router = useRouter();
   const handleSignOut = useSignOut();
   
   return (

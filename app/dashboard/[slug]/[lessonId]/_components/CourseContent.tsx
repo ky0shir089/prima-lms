@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import { tryCatch } from "@/hooks/try-catch";
 import { useConstructUrl } from "@/hooks/use-construct-url";
 import { BookIcon, CheckCircle } from "lucide-react";
-import Image from "next/image";
 import { useTransition } from "react";
 import { markLessonAsComplete } from "../action";
 import { toast } from "sonner";

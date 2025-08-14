@@ -23,7 +23,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Plus } from "lucide-react";
 import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
-import { createChapter, createLesson } from "../action";
+import { createLesson } from "../action";
 import { toast } from "sonner";
 
 const NewLessonModal = ({

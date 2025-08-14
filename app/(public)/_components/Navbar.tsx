@@ -1,10 +1,7 @@
-// "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/vercel.svg";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { authClient } from "@/lib/auth-client";
 import { buttonVariants } from "@/components/ui/button";
 import { UserDropdown } from "./UserDropdown";
 
@@ -15,7 +12,6 @@ const navigationItems = [
 ];
 
 const Navbar = ({ session }: { session: any }) => {
-  //   const { data: session, isPending } = authClient.useSession();
   const isPending = false;
 
   return (
