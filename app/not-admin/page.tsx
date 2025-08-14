@@ -20,7 +20,7 @@ const NotAdminpage = () => {
 
           <CardTitle className="text-2xl">Access Restricted</CardTitle>
           <CardDescription className="max-w-xs mx-auto">
-            Hey! You are not an Admin, which means you can't create any courses
+            Hey! You are not an Admin, which means you can&apos;t create any courses
             or stuff like that...
           </CardDescription>
         </CardHeader>

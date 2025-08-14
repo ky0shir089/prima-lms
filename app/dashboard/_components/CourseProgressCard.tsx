@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { EnrollCourseType } from "@/app/data/user/get-enrolled-courses";

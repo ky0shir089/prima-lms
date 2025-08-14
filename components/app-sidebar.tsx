@@ -1,10 +1,7 @@
 "use client";
 
 import * as React from "react";
-import {
-  IconDashboard,
-  IconListDetails,
-} from "@tabler/icons-react";
+import { IconDashboard, IconListDetails } from "@tabler/icons-react";
 import Logo from "@/public/vercel.svg";
 
 import { NavMain } from "@/components/nav-main";
@@ -50,7 +47,7 @@ interface AppSidebarProps {
   };
 }
 
-export function AppSidebar({ variant, user, ...props }: AppSidebarProps) {
+export function AppSidebar({ user, ...props }: AppSidebarProps) {
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>

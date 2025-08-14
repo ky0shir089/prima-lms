@@ -42,7 +42,7 @@ interface AppSidebarProps {
   };
 }
 
-export function AppSidebar({ variant, user, ...props }: AppSidebarProps) {
+export function AppSidebar({ user, ...props }: AppSidebarProps) {
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
