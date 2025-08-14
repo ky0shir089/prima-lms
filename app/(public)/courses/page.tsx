@@ -4,6 +4,8 @@ import PublicCourseCard, {
 } from "../_components/PublicCourseCard";
 import { Suspense } from "react";
 
+export const dynamic = "force-dynamic";
+
 const RenderCourses = async () => {
   const courses = await getAllCourses();
 
