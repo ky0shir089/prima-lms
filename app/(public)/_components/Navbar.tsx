@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/vercel.svg";
@@ -6,13 +5,16 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { buttonVariants } from "@/components/ui/button";
 import { UserDropdown } from "./UserDropdown";
 
+import { authClient } from "@/lib/auth-client";
+
 const navigationItems = [
   { name: "Home", href: "/" },
   { name: "Courses", href: "/courses" },
   { name: "Dashboard", href: "/dashboard" },
 ];
 
-const Navbar = ({ session }: { session: any }) => {
+const Navbar = async () => {
+  const { data: session } = await authClient.getSession()
   const isPending = false;
 
   return (
